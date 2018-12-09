@@ -1,0 +1,1 @@
+export { gmap, setVariables, setApiKeyVariable } from './maps-service';
