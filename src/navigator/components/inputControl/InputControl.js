@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { gmap } from '../../services/maps';
-import MSG from '../../config/error.json';
+import ERROR_MSG from '../../config/error.js';
 import './InputControl.css';
 
 class InputControl extends Component {
@@ -18,7 +18,7 @@ class InputControl extends Component {
     this.startLocation = React.createRef();
     this.dropLocation = React.createRef();
 
-    this.msg = Object.create(MSG);
+    this.msg = Object.create(ERROR_MSG);
     
     // Properties for creating input field
     this.inputProperties = [

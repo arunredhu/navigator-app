@@ -1,4 +1,4 @@
-{
+const GMAP_SETTINGS = {
   "MAP_SETTINGS" : {
     "center": {
       "lat": -34.397, 
@@ -8,6 +8,7 @@
   },
   "TRAVEL_MODE": "DRIVING",
   "LIBRARIES": ["geometry", "places"],
-  "LANGUAGE": "en",
-  "API_KEY": ""
+  "LANGUAGE": "en"
 }
+
+export default GMAP_SETTINGS;

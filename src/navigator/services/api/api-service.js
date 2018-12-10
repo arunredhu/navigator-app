@@ -1,10 +1,10 @@
-import ERROR_MSG from '../../config/error.json';
+import ERROR_MSG from '../../config/error.js';
 
 const errorMsg = Object.create(ERROR_MSG);
 
 // function to extract data from any URL
 export const fetchApiData = (URL, type, param = '', body = {}) => {
-  const POST = 'post';
+  const POST = 'POST';
   const config = { 'method': type }
 
   if (type === POST)

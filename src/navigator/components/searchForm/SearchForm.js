@@ -3,8 +3,8 @@ import MsgBox from '../msgBox';
 import InputControl from '../inputControl';
 import Preloader from '../preloader'
 import { sendRoutes, fetchRoutes } from '../../services/navigator';
-import APICONFIG from '../../config/api.json';
-import MSG from '../../config/error.json';
+import API_SETTINGS from '../../config/api.js';
+import ERROR_MSG from '../../config/error.js';
 import PropTypes from 'prop-types';
 import './SearchForm.css';
 
@@ -20,8 +20,8 @@ class SearchForm extends Component {
     }
   
     this.inputControl = React.createRef();
-    this.apiConfig = Object.create(APICONFIG.MOCK_API);
-    this.msg = Object.create(MSG);
+    this.apiConfig = Object.create(API_SETTINGS.MOCK_API);
+    this.msg = Object.create(ERROR_MSG);
     this.startDropLocation = [];
   }
 

@@ -14,26 +14,15 @@ Application to plot distance between two locations on Google Map
 
 ### Configuration ###
 
-* Configuration settings are placed in according *.json file in /src/config & /src/navigator/config.
-* Application is working on port 3000 as defined in /src/config/default.json.
+* Configuration settings are placed in /src/navigator/config.
 
-```json
-{
-  "APP_PORT": 3000
-}
-```
-
-* Please update the Google Maps Api key in the .env file in the project root or in the /src/navigator/config/gmap.json (Any one)
+* Please create an .env file in the root folder of the project and update the Google Maps key as defined below.
 
 ```json
 REACT_APP_GMAP_KEY = API_KEY_HERE
 ```
 
-```json
- "API_KEY": ""
-```
-
-* Google Maps api can be configured from /src/navigator/config/gmap.json
+* Google Maps api can be configured from /src/navigator/config/gmap.js
 
 ```json
 {
@@ -46,8 +35,7 @@ REACT_APP_GMAP_KEY = API_KEY_HERE
   },
   "TRAVEL_MODE": "DRIVING",
   "LIBRARIES": ["geometry", "places"],
-  "LANGUAGE": "en",
-  "API_KEY": ""
+  "LANGUAGE": "en"
 }
 ```
 
@@ -58,8 +46,6 @@ REACT_APP_GMAP_KEY = API_KEY_HERE
   "MOCK_API": {
     "URL": "http://localhost:8080",
     "NAVIGATOR_SUB_PATH": "/route",
-    "METHOD_POST": "POST",
-    "METHOD_GET": "GET",
     "MSG_SUCCESS": "success",
     "MSG_IN_PROGRESS": "in progress"
   }

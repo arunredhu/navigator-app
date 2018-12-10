@@ -75,4 +75,20 @@ describe('navigator-services', () => {
     expect(response).toBe(sampleMsg);
     apiService.mockRestore();
   });
+
+  test('fetchRoutes() returns the status correctly', async () => {
+    const sampleData = {
+      "status": "in progress"
+    };
+    const apiService = jest.spyOn(ApiService, 'fetchApiData');
+
+    apiService.mockImplementation(() =>
+      Promise.resolve(sampleData)
+    );
+
+    const response = await fetchRoutes(); // method being tested
+
+    expect(response.status).toBe(sampleData.status);
+    apiService.mockRestore();
+  });
 })

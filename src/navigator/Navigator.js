@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import SearchForm from './components/searchForm';
 import { gmap } from  './services/maps';
-import MAPCONFIG from './config/gmap.json';
+import GMAP_SETTINGS from './config/gmap.js';
 import "./Navigator.css";
 
 class Navigator extends Component {
@@ -14,7 +14,7 @@ class Navigator extends Component {
     this.gmaps = {};
     this.newmap = {};
     this.mapContainer = React.createRef();
-    this.mapConfig = Object.create(MAPCONFIG);
+    this.mapConfig = Object.create(GMAP_SETTINGS);
   }
 
   componentDidMount() {

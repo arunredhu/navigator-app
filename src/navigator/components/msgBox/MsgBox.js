@@ -1,12 +1,12 @@
 import React from 'react';
-import API_MSG from '../../config/api.json';
-import ERROR_MSG from '../../config/error.json';
+import API_SETTINGS from '../../config/api.js';
+import ERROR_MSG from '../../config/error.js';
 import CancelIcon from './icons/cancel.svg';
 import SuccessIcon from './icons/success.svg';
 import InfoIcon from './icons/info.svg';
 import './MsgBox.css';
 
-const apiMsg = Object.create(API_MSG);
+const apiMsg = Object.create(API_SETTINGS);
 const errorMsg = Object.create(ERROR_MSG);
 
 // Method render the received API data

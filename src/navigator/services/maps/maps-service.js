@@ -1,12 +1,17 @@
 import GoogleMapsLoader from 'google-maps';
-import MapSettings from '../../config/gmap.json';
+import GMAP_SETTINGS from '../../config/gmap.js';
 
 let gMap;
-let settings = Object.create(MapSettings);
-let apiKey = process.env.REACT_APP_GMAP_KEY || settings.API_KEY;
+let settings = Object.create(GMAP_SETTINGS);
 
-export const setApiKeyVariable = (key = apiKey) => {
-  GoogleMapsLoader.KEY = key;
+export const setApiKeyVariable = (customkey) => {
+  const key = customkey || process.env.REACT_APP_GMAP_KEY;
+
+  if (key) {
+    GoogleMapsLoader.KEY = key;
+  } else {
+    alert('Google Maps API key is not defined, please refer the project README file for more information')
+  }
 }
 
 export const setVariables = (config) => {

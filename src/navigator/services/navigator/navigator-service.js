@@ -1,12 +1,11 @@
 import { fetchApiData } from '../api/api-service';
-import APICONFIG from '../../config/api.json';
+import API_SETTINGS from '../../config/api.js';
 
 // Service to send routes to the API 
 export const sendRoutes = (body) => {
 	return fetchApiData(
-		APICONFIG.MOCK_API['URL'], 
-		APICONFIG.MOCK_API['METHOD_POST'], 
-		APICONFIG.MOCK_API.NAVIGATOR_SUB_PATH,
+		API_SETTINGS.MOCK_API['URL'], "POST", 
+		API_SETTINGS.MOCK_API.NAVIGATOR_SUB_PATH,
 		body
   );
 }
@@ -14,8 +13,7 @@ export const sendRoutes = (body) => {
 // Service to receive routes from the API 
 export const fetchRoutes = (token) => {
   return fetchApiData(
-		APICONFIG.MOCK_API['URL'], 
-		APICONFIG.MOCK_API['METHOD_GET'], 
-		APICONFIG.MOCK_API.NAVIGATOR_SUB_PATH + '/' + token
+		API_SETTINGS.MOCK_API['URL'], "GET", 
+		API_SETTINGS.MOCK_API.NAVIGATOR_SUB_PATH + '/' + token
   );
  }
